@@ -23,3 +23,4 @@ bash scripts/load_demo.sh
 - scripts → db init/demo/backup
 - docker-compose.yml, Dockerfile, docker/odoo.conf
 
+# ERP
