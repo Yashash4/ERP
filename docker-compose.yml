@@ -1,0 +1,33 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:14
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-erp}
+      POSTGRES_USER: ${POSTGRES_USER:-erp}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-erp}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-erp}"]
+      interval: 5s
+      retries: 10
+
+  odoo:
+    build: .
+    image: yourerp:dev
+    depends_on:
+      - db
+    ports: ["8069:8069"]
+    environment:
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-admin}
+    volumes:
+      - ./addons:/mnt/addons_upstream:ro
+      - ./my_addons:/mnt/my_addons
+      - ./docker/odoo.conf:/etc/odoo/odoo.conf:ro
+      - filestore:/var/lib/odoo
+    command: ["odoo", "-c", "/etc/odoo/odoo.conf"]
+
+volumes:
+  db_data:
+  filestore:

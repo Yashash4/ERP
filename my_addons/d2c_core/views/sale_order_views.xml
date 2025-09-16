@@ -1,0 +1,28 @@
+<odoo>
+  <record id="view_order_form_d2c" model="ir.ui.view">
+    <field name="name">sale.order.form.d2c</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+      <xpath expr="//sheet/notebook/page[@name='order_lines']" position="after">
+        <group string="COD">
+          <field name="cod_required"/>
+          <field name="cod_status" readonly="1"/>
+          <button name="action_cod_request" type="object" string="Request COD" class="oe_highlight" attrs="{'invisible': [('cod_required','=',False)]}"/>
+          <button name="action_cod_confirm" type="object" string="Confirm COD" attrs="{'invisible': [('cod_required','=',False)]}"/>
+        </group>
+      </xpath>
+    </field>
+  </record>
+
+  <record id="action_d2c_orders" model="ir.actions.act_window">
+    <field name="name">D2C Orders</field>
+    <field name="res_model">sale.order</field>
+    <field name="view_mode">tree,form</field>
+    <field name="domain">[("cod_required","=",True)]</field>
+  </record>
+
+  <menuitem id="menu_d2c_root" name="D2C" parent="sales_team.menu_sale_root"/>
+  <menuitem id="menu_d2c_orders" name="COD Orders" parent="menu_d2c_root" action="action_d2c_orders"/>
+</odoo>
+

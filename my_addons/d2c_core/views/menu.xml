@@ -1,0 +1,5 @@
+<odoo>
+  <menuitem id="menu_d2c_root" name="D2C" parent="sales_team.menu_sale_root"/>
+  <menuitem id="menu_d2c_orders" name="COD Orders" parent="menu_d2c_root" action="action_d2c_orders"/>
+</odoo>
+

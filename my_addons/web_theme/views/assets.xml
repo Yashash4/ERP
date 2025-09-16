@@ -1,0 +1,8 @@
+<odoo>
+  <template id="assets_backend" name="YourERP Assets" inherit_id="web.assets_backend">
+    <xpath expr="." position="inside">
+      <link rel="stylesheet" type="text/scss" href="/web_theme/static/src/scss/brand.scss"/>
+    </xpath>
+  </template>
+</odoo>
+
