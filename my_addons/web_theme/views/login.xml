@@ -1,10 +1,16 @@
 <odoo>
   <template id="login_layout" inherit_id="web.login_layout">
+    <xpath expr="//head" position="inside">
+      <link rel="icon" type="image/x-icon" href="/web_theme/static/src/img/favicon.ico"/>
+    </xpath>
     <xpath expr="//title" position="replace">
       <title>YourERP — Sign In</title>
     </xpath>
     <xpath expr="//div[@id='wrapwrap']" position="inside">
-      <div class="yourerp-logo">YourERP</div>
+      <div class="yourerp-login-box">
+        <img src="/web_theme/static/src/img/logo.png" alt="YourERP"/>
+        <h2>Welcome to YourERP</h2>
+      </div>
     </xpath>
   </template>
 </odoo>

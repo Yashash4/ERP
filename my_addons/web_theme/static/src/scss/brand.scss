@@ -1,4 +1,17 @@
-:root { --brand-primary: #2563eb; --brand-accent: #16a34a; }
-.o_main_navbar { background-color: var(--brand-primary) !important; color: #fff !important; }
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --brand-primary: #1D4ED8;
+  --brand-secondary: #16A34A;
+  --brand-accent: #F59E0B;
+  --brand-bg: #F9FAFB;
+  --brand-text: #111827;
+}
+
+body, .o_main_navbar { font-family: 'Inter', sans-serif; }
+
+.o_main_navbar { background: var(--brand-primary) !important; color: white !important; }
 .o_main_navbar .o_menu_brand { font-weight: bold; }
+.o_web_client { background-color: var(--brand-bg); }
+.o_action_manager { padding: 20px; }
 

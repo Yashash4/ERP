@@ -2,6 +2,23 @@
   <menuitem id="menu_d2c_root" name="D2C" parent="sale.sale_menu_root"/>
   <menuitem id="menu_d2c_orders" name="COD Orders" parent="menu_d2c_root" action="action_d2c_orders"/>
 
+  <!-- Rename core menus -->
+  <record id="sale.menu_sale_order_root" model="ir.ui.menu">
+    <field name="name">Orders</field>
+    <field name="sequence" eval="10"/>
+  </record>
+  <record id="stock.menu_stock_root" model="ir.ui.menu">
+    <field name="name">Stock</field>
+    <field name="sequence" eval="20"/>
+  </record>
+  <record id="account.menu_finance" model="ir.ui.menu">
+    <field name="name">Payments</field>
+    <field name="sequence" eval="30"/>
+  </record>
+  <record id="contacts.menu_contacts_root" model="ir.ui.menu">
+    <field name="sequence" eval="40"/>
+  </record>
+
   <!-- Hide CRM -->
   <record id="crm.menu_crm_root" model="ir.ui.menu">
     <field name="active" eval="False"/>
