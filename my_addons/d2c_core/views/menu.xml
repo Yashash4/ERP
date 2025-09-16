@@ -14,5 +14,9 @@
   <record id="hr.menu_hr_root" model="ir.ui.menu">
     <field name="active" eval="False"/>
   </record>
+  <!-- Hide Marketing -->
+  <record id="marketing_automation.menu_marketing_root" model="ir.ui.menu">
+    <field name="active" eval="False"/>
+  </record>
 </odoo>
 

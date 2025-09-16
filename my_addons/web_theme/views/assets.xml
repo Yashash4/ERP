@@ -1,11 +1,7 @@
 <odoo>
-  <!-- Try using the login layout instead since it's more reliably available -->
-  <template id="web_client_custom_styles" inherit_id="web.login_layout">
-    <xpath expr="//head" position="inside">
-      <style>
-        .o_web_client { --brand-primary: #3b82f6; }
-        .o_main_navbar { background: var(--brand-primary); }
-      </style>
+  <template id="assets_backend" name="YourERP Assets" inherit_id="web._assets_backend">
+    <xpath expr="." position="inside">
+      <link rel="stylesheet" type="text/scss" href="/web_theme/static/src/scss/brand.scss"/>
     </xpath>
   </template>
 </odoo>

@@ -1,3 +1,4 @@
-:root { --brand-primary: #2563eb; }
-.o_main_navbar { background-color: var(--brand-primary); color: #fff; }
+:root { --brand-primary: #2563eb; --brand-accent: #16a34a; }
+.o_main_navbar { background-color: var(--brand-primary) !important; color: #fff !important; }
+.o_main_navbar .o_menu_brand { font-weight: bold; }
 
