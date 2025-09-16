@@ -3,13 +3,12 @@
     <xpath expr="//head" position="inside">
       <link rel="icon" type="image/x-icon" href="/web_theme/static/src/img/favicon.ico"/>
     </xpath>
-    <xpath expr="//title" position="replace">
-      <title>YourERP — Sign In</title>
-    </xpath>
-    <xpath expr="//div[@id='wrapwrap']" position="inside">
+    <xpath expr="//title" position="replace"><title>YourERP — Sign In</title></xpath>
+    <xpath expr="//div[@id='wrapwrap']" position="replace">
       <div class="yourerp-login-box">
-        <img src="/web_theme/static/src/img/logo.png" alt="YourERP"/>
+        <img src="/web_theme/static/src/img/logo.png" class="login-logo"/>
         <h2>Welcome to YourERP</h2>
+        <t t-call="web.login_form"/>
       </div>
     </xpath>
   </template>

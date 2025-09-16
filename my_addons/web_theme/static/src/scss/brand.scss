@@ -1,17 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 :root {
-  --brand-primary: #1D4ED8;
-  --brand-secondary: #16A34A;
-  --brand-accent: #F59E0B;
-  --brand-bg: #F9FAFB;
-  --brand-text: #111827;
+  --brand-primary: #1D4ED8; /* blue */
+  --brand-secondary: #16A34A; /* green */
+  --brand-accent: #F59E0B; /* amber */
+  --brand-bg: #F9FAFB; /* light gray */
+  --brand-text: #111827; /* dark gray */
 }
 
-body, .o_main_navbar { font-family: 'Inter', sans-serif; }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--brand-bg);
+  color: var(--brand-text);
+}
 
-.o_main_navbar { background: var(--brand-primary) !important; color: white !important; }
-.o_main_navbar .o_menu_brand { font-weight: bold; }
+.o_main_navbar {
+  background: var(--brand-primary) !important;
+  color: #fff !important;
+}
+
+.o_main_navbar .o_menu_brand {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
 .o_web_client { background-color: var(--brand-bg); }
 .o_action_manager { padding: 20px; }
+
+.yourerp-login-box {
+  max-width: 400px;
+  margin: 80px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.login-logo { width: 120px; margin-bottom: 15px; }
 
