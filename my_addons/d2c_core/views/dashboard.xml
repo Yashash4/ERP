@@ -1,0 +1,9 @@
+<odoo>
+  <record id="d2c_dashboard_action" model="ir.actions.client">
+    <field name="tag">d2c_dashboard</field>
+    <field name="name">YourERP Dashboard</field>
+  </record>
+
+  <menuitem id="d2c_dashboard_menu" name="Dashboard" action="d2c_dashboard_action" sequence="1"/>
+</odoo>
+

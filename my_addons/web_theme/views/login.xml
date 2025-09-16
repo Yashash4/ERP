@@ -4,7 +4,7 @@
       <title>YourERP — Sign In</title>
     </xpath>
     <xpath expr="//div[@id='wrapwrap']" position="inside">
-      <div class="yourerp-logo"/>
+      <div class="yourerp-logo">YourERP</div>
     </xpath>
   </template>
 </odoo>

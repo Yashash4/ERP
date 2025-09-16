@@ -1,5 +1,18 @@
 <odoo>
-  <menuitem id="menu_d2c_root" name="D2C" parent="sales_team.menu_sale_root"/>
+  <menuitem id="menu_d2c_root" name="D2C" parent="sale.sale_menu_root"/>
   <menuitem id="menu_d2c_orders" name="COD Orders" parent="menu_d2c_root" action="action_d2c_orders"/>
+
+  <!-- Hide CRM -->
+  <record id="crm.menu_crm_root" model="ir.ui.menu">
+    <field name="active" eval="False"/>
+  </record>
+  <!-- Hide Manufacturing -->
+  <record id="mrp.menu_mrp_root" model="ir.ui.menu">
+    <field name="active" eval="False"/>
+  </record>
+  <!-- Hide HR -->
+  <record id="hr.menu_hr_root" model="ir.ui.menu">
+    <field name="active" eval="False"/>
+  </record>
 </odoo>
 

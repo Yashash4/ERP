@@ -1,0 +1,9 @@
+<t t-name="d2c_core.Dashboard">
+  <div class="o_d2c_dashboard">
+    <h2>Welcome to YourERP</h2>
+    <div class="kpi">Sales Today: <t t-esc="100"/></div>
+    <div class="kpi">Pending COD Orders: <t t-esc="5"/></div>
+    <div class="kpi">Low Stock Products: <t t-esc="3"/></div>
+  </div>
+</t>
+
