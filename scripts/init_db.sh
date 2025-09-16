@@ -12,8 +12,8 @@ python -m odoo -d "$DB" -i base --without-demo=all --stop-after-init \
   --db_host=db --db_user=${POSTGRES_USER:-erp} --db_password=${POSTGRES_PASSWORD:-erp} \
   -c /etc/odoo/odoo.conf
 
-echo "Installing modules: web_theme,d2c_core,shopify_sync"
-python -m odoo -d "$DB" -i web_theme,d2c_core,shopify_sync --stop-after-init \
+echo "Installing modules: web,web_theme,d2c_core,shopify_sync"
+python -m odoo -d "$DB" -i web,web_theme,d2c_core,shopify_sync --stop-after-init \
   --db_host=db --db_user=${POSTGRES_USER:-erp} --db_password=${POSTGRES_PASSWORD:-erp} \
   -c /etc/odoo/odoo.conf
 
